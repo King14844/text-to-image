@@ -1,8 +1,10 @@
 from flask import Flask, request, send_file
+from flask_cors import CORS
 import requests
 from io import BytesIO
 
 app = Flask(__name__)
+CORS(app)
 
 @app.route('/get_image', methods=['POST'])
 def get_image():
